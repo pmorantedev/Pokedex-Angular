@@ -1,0 +1,20 @@
+.row {
+    display:flex;
+    padding: 80px;
+    align-items: center;
+    justify-content: space-evenly;
+    p {
+        margin-left: 10%;
+    }
+    img {
+        filter: drop-shadow(25px 25px 25px #333);
+        max-width: 550px;
+    }
+}
+
+.texto p {
+    padding: 25px;
+    background: #00000020;
+    border-radius: 25px;
+    filter: drop-shadow(25px 25px 25px #020001);
+}

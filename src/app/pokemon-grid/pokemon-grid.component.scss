@@ -1,0 +1,88 @@
+.sectionPokemon {
+    align-items: flex-start;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 45px;
+
+}
+
+.grid {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: relative;
+    text-align: center;
+	background: #00000030;
+    border-radius: 25px;
+    filter: drop-shadow(25px 25px 25px #020001);
+
+    .cardFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .pokemonName {
+            margin-right: 10px;
+            text-transform: uppercase;
+			color: white !important;
+			font-size:20px;
+			font-weight:bold;
+        }
+
+    }
+
+	.cardNum p{
+		text-align:center;
+		color: white;
+		font-size: 18px;
+	}
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.card:hover{
+	transform: scale(1.05) translateZ(0);
+  }
+  
+//   .grid:hover > .card:not(:hover){
+// 	filter: brightness(0.5) saturate(0) contrast(1.2) blur(10px);
+
+//   }
+
+  .grid:hover > .card:not(:hover) {
+	filter: blur(3px);
+  }
+
+  .topButton {
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 15px;
+    text-decoration: none;
+    background: #11000042;
+    color:#000;
+    border:#000000 solid 1px;
+    justify-self: center;
+}
+
+
+
+// .card {
+//     list-style: none;
+// 	position: relative;
+//     background-color: rgba(0, 0, 0, 0.363);
+//     border-radius: 15px;

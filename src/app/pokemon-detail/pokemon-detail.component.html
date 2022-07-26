@@ -1,0 +1,53 @@
+<div>
+    <div class="card">
+        <div class="header_card">
+            <div class="cardNum">
+                <p>#{{pokemon.__zone_symbol__value.id}}</p>
+            </div>
+            <div class="cardName">
+                <p class="pokemonName">{{pokemon.__zone_symbol__value.name | uppercase}}</p>
+            </div>
+        </div>
+        <div class="body_card">
+            <div class="cardImg">
+                <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.__zone_symbol__value.id}}.png">
+            </div>
+            <div class="text">
+                <p>Weight: {{pokemon.__zone_symbol__value.weight /10}} kg</p>
+                <p>Height: {{pokemon.__zone_symbol__value.height /10}} m</p>
+                <p>Abilities: </p>
+                <ul *ngFor="let ability of pokemon.__zone_symbol__value.abilities">
+                    <li>{{ability.ability.name | uppercase}}</li>
+                </ul>
+                <p>Stats:</p>
+                <ul class="stats" *ngFor="let stats of pokemon.__zone_symbol__value.stats">
+                    <li>{{stats.stat.name | uppercase}}:       {{stats.base_stat}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_card">
+            <div *ngFor="let type of pokemon.__zone_symbol__value.types">
+                <div *ngIf="type.type.name == 'normal'"><img src="https://archives.bulbagarden.net/media/upload/thumb/0/0f/NormalIC.png/105px-NormalIC.png"></div>
+                <div *ngIf="type.type.name == 'fighting'"><img src="https://archives.bulbagarden.net/media/upload/thumb/9/9b/FightingIC.png/105px-FightingIC.png"></div>
+                <div *ngIf="type.type.name == 'flying'"><img src="https://archives.bulbagarden.net/media/upload/thumb/d/dc/FlyingIC.png/105px-FlyingIC.png"></div>
+                <div *ngIf="type.type.name == 'poison'"><img src="https://archives.bulbagarden.net/media/upload/thumb/8/86/PoisonIC.png/105px-PoisonIC.png"></div>
+                <div *ngIf="type.type.name == 'ground'"><img src="https://archives.bulbagarden.net/media/upload/thumb/8/87/GroundIC.png/105px-GroundIC.png"></div>
+                <div *ngIf="type.type.name == 'rock'"><img src="https://archives.bulbagarden.net/media/upload/thumb/e/e6/RockIC.png/105px-RockIC.png"></div>
+                <div *ngIf="type.type.name == 'bug'"><img src="https://archives.bulbagarden.net/media/upload/thumb/b/bd/BugIC.png/105px-BugIC.png"></div>
+                <div *ngIf="type.type.name == 'ghost'"><img src="https://archives.bulbagarden.net/media/upload/thumb/c/c3/GhostIC.png/105px-GhostIC.png"></div>
+                <div *ngIf="type.type.name == 'steel'"><img src="https://archives.bulbagarden.net/media/upload/thumb/7/7e/SteelIC.png/105px-SteelIC.png"></div>
+                <div *ngIf="type.type.name == 'fire'"><img src="https://archives.bulbagarden.net/media/upload/thumb/9/9f/FireIC.png/105px-FireIC.png"></div> 
+                <div *ngIf="type.type.name == 'water'"><img src="https://archives.bulbagarden.net/media/upload/thumb/b/b0/WaterIC.png/105px-WaterIC.png"></div>
+                <div *ngIf="type.type.name == 'grass'"><img src="https://archives.bulbagarden.net/media/upload/thumb/a/a5/GrassIC.png/105px-GrassIC.png"></div>
+                <div *ngIf="type.type.name == 'electric'"><img src="https://archives.bulbagarden.net/media/upload/thumb/e/ea/ElectricIC.png/105px-ElectricIC.png"></div>
+                <div *ngIf="type.type.name == 'psychic'"><img src="https://archives.bulbagarden.net/media/upload/thumb/f/f8/PsychicIC.png/105px-PsychicIC.png"></div>
+                <div *ngIf="type.type.name == 'ice'"><img src="https://archives.bulbagarden.net/media/upload/thumb/8/86/IceIC.png/105px-IceIC.png"></div>
+                <div *ngIf="type.type.name == 'dragon'"><img src="https://archives.bulbagarden.net/media/upload/thumb/c/c3/DragonIC.png/105px-DragonIC.png"></div>
+                <div *ngIf="type.type.name == 'dark'"><img src="https://archives.bulbagarden.net/media/upload/thumb/e/e3/DarkIC.png/105px-DarkIC.png"></div>
+                <div *ngIf="type.type.name == 'fairy'"><img src="https://archives.bulbagarden.net/media/upload/thumb/3/31/FairyIC.png/105px-FairyIC.png"></div>
+            </div>
+        </div>
+    </div>
+    <a class="backButton" href="pokemon">Back</a>
+</div>

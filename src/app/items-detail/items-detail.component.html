@@ -1,0 +1,19 @@
+<div>
+    <div class="card">
+        <div class="header_card">
+            <div class="cardNum">
+                <p>#{{item.__zone_symbol__value.id}}</p>
+            </div>
+            <div class="cardName">
+                <p class="pokemonName">{{item.__zone_symbol__value.name | uppercase}} <span class="minitext">{{item.__zone_symbol__value.category.name}}</span></p>
+            </div>
+        </div>
+        <div class="image">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/{{item.__zone_symbol__value.name}}.png">
+        </div>
+        <div class="text" *ngFor="let effect of item.__zone_symbol__value.effect_entries">
+            <p>{{effect.effect}}</p>
+        </div>
+    </div>
+    <a class="backButton" href="items">Back</a>
+</div>

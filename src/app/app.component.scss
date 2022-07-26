@@ -1,0 +1,84 @@
+.navbar {
+    width: auto;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #00000046;
+    border-radius: 25px;
+}
+
+.logo {
+    width: 175px;
+    height: 72px;
+    margin-left: 15px;
+    border-radius: 45px;
+    filter: drop-shadow(5px 5px 5px #020001);
+}
+
+.divLinks {
+    display: flex;
+    margin: 0 20px;
+    position: relative;
+
+    div a {
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 15px;
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+.divLinks div a:hover {
+    border-bottom: 2px solid #fff;
+    font-size: 25px;
+    transition: all 3s;
+}
+
+.searchBar {
+    margin-right: 10px;
+    position: relative;
+    input {
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        background: none;
+        color: #fff;
+    }
+    input:hover {
+        border: 1px solid #000;
+        background: #00000024;
+        transition: all 1s;
+    }
+    button {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        background: none;
+        border: none;
+        span {
+            font-weight: bold;
+            color: #fff
+        }
+    }
+}
+
+hr {
+    width:55%;
+}
+
+.footer p {
+    padding: 40px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.footer img {
+    width: 15px;
+}
+
+.footer a {
+    cursor:auto;
+}
